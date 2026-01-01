@@ -1,0 +1,19 @@
+name: runner-test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test-runner:
+    runs-on: [self-hosted, ubuntu24]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Identify runner
+        run: |
+          echo "=== Runner Info ==="
+          hostname
+          whoami
+          uname -a
+          ip a | grep inet
