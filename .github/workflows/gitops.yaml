@@ -1,4 +1,4 @@
-name: GitOps DevSecOps Pipeline
+name: Run SAST Scan on SuperMario Game Project
 
 on:
   push:
